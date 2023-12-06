@@ -9,6 +9,16 @@ navBtn.onclick = () => {
     document.body.classList.toggle('no-scroll');
 };
 
+const navLinks = document.querySelectorAll('.nav__list a');
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        navIcon.classList.remove('nav-icon--active');
+        nav.classList.remove('header__top-row-mobile');
+        document.body.classList.remove('no-scroll');
+    });
+});
+
 // Phone mask
 mask('[data-tel-input]');
 
